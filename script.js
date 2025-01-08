@@ -1,30 +1,42 @@
 let input = document.querySelector('#add-text');
-let list = document.querySelector('ul');
+let lista = document.querySelector('#lista-container');
 
 
- function handleKeyUp (e) {
-    if (e.key === 'Enter') {
-        let newitem = document.createElement('div')
+ function criartarefa () {
+    
+        let newitem = document.createElement('li')
         newitem.className = 'item-lista';
+    
 
         let btn = document.createElement('button')
         btn.className = 'material-symbols-outlined';
         btn.innerHTML = "<button onclick = excluir() class= material-symbols-outlined>close</button>"
+
         let newH2 = document.createElement('h2')
+
         newitem.appendChild(newH2);
         newitem.appendChild(btn)
         newH2.innerHTML = input.value;
-        list.appendChild(newitem);
-
-    input.value = '';
-    }
+        lista.appendChild(newitem);
+       
  }
 
- input.addEventListener('keyup', handleKeyUp);
+ function addbutton (e) {
+    if (e.key === 'Enter') {
+        criartarefa()
+        input.value = "";
+    }
+  }
+
+ input.addEventListener('keyup', addbutton);
 
 
 
-    function excluir () {
-        let removerelemento = document.querySelector('.item-lista');
-        removerelemento.remove()
+    function excluir (btn) {
+        let removeritem = btn.parentNode
+        removeritem.remove()
+    }
+
+    function apagartudo(){
+        lista.innerHTML = " ";
     }

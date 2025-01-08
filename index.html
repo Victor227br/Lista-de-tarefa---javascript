@@ -11,16 +11,23 @@
     <style>  @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Quicksand:wght@300..700&display=swap');</style>    
 </head>
 <body>
-    
 
-        <div class="container-add">
-            <h1> Lista de tarefas</h1>
-            <input id="add-text" type="text" placeholder="Adicione uma tarefa">
-        </div>
-
-        <ul></ul>
-        <script src="script.js" ></script>
+<div class="container-add">
+    <h1 id="titulo">Lista de tarefas</h1>
+    <input id="add-text" type="text" placeholder="Adicione uma tarefa" />
+          <button id="button-criar" onclick="criartarefa()" >Adicionar</button>
+  
+          
+        </div> 
+        <ul id="lista-container"></ul>
         
-   <nav></nav>
+        <nav>
+            <button id="button-excluirlista" onclick="apagartudo()" id="limpar-button"> Limpar</button>
+        </nav>
+
+
+    <script src="script.js"></script>
+        
+
 </body>
 </html>

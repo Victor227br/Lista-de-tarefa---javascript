@@ -4,11 +4,21 @@
     background-color: #2B2D42;
 }
     
+/* #titulo{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+} */
 
 h1 {
-    
-    background-color: darkorchid;
-    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration:underline rgb(27, 180, 103);
+    min-width: 20vw;
+    border-radius: 5px;
+    padding-bottom: 30px;
+  
+
 }
 
 h2 {
@@ -16,21 +26,27 @@ h2 {
     margin-top: 10px;
     margin-left: 13px;
 }
+
 nav {
-    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-self: center; 
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+
 }
 
 .container-add {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
-    justify-content: space-around;
     flex-direction: column;
     background-color: #2B2D42;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 4%;
     padding: 3px;
+    padding-bottom: 2 vw;
     min-height: 10vw;
     border-radius: 10px;
     color: white;
@@ -40,20 +56,22 @@ nav {
     height: 30px;
     border-radius: 5px;
     font-size: 16px;
-    width: 16vw;
+    min-width: 16vw;
     box-shadow: 0 0 0 0;
     border: 0;
     outline: 0;
     background-color: #FFFFFF;
     color: #2B2D42;
     padding-left: 8px;
+    
 }
+
 
 .item-lista{
     display: flex;
     justify-content: center;
     align-items: space-around;
-    padding: 2px;
+    padding: 7px;
     justify-content: space-between;
     flex-direction:row;
     background-color: 	#484C69;
@@ -68,19 +86,48 @@ nav {
 
 
 .material-symbols-outlined  {
-    background-color:  rgb(255, 0, 0) ;
+    background-color:  rgb(255, 0, 0);
     border-radius: 50px;
     margin: 7px;
     outline: 0;
     box-shadow: 0 0 0 0;
     border: 0;
     outline: 0;
-    color: rgb(255, 255, 255);
+    color: #FEFFFB;
     cursor: pointer;
     
 }
 
+#button-criar{
+    min-height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 8vw;
+    box-shadow: 0 0 0 0;
+    border: 0;
+    outline: 0;
+    min-width: 16vw;
+    color: #FFFFFF;
+    background-color: rgb(27, 180, 103);
+    
 
+}
+
+#button-excluirlista{
+    min-height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 8vw;
+    box-shadow: 0 0 0 0;
+    border: 0;
+    outline: 0;
+    color: #FFFFFF;
+    background-color:   rgb(255, 0, 0);
+    bottom: 0;
+    position:sticky;
+    cursor: pointer;
+
+}
 
 
 
