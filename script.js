@@ -26,17 +26,18 @@ let lista = document.querySelector('#lista-container');
             checkinput.type = 'checkbox';
             checkinput.id = 'checkbox';
             let label = document.createElement('label');
-            label.setAttribute = 'for'
-            label.getAttribute = 'checkbox'
-   
-           
+            label.setAttribute('for', 'checkbox')
             
+              
             divlist.appendChild(newH2);
             divlist.appendChild(btn);
+
             newitem.appendChild(divlist);
             newitem.appendChild(check);
+
             check.appendChild(checkinput);
             check.appendChild(label);
+
             newH2.innerHTML = input.value;
             lista.appendChild(newitem);
  }
@@ -51,11 +52,12 @@ let lista = document.querySelector('#lista-container');
 
  input.addEventListener('keyup', addbutton);
 
-    function tarefaconcluida(){
-      let check = document.createElement('input:checked')
-      newitem.appendChild(check);
-
-    }
+    
+  function tarefaconcluida () {
+    
+ 
+  }
+    
 
     function excluir (newitem) {
             newitem.remove();
