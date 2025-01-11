@@ -75,6 +75,7 @@ nav {
     align-items: center;
     padding: 7px;
     justify-content: space-between;
+
     flex-direction:row;
     background-color: 	#484C69;
     margin-left: 30%;
@@ -82,7 +83,8 @@ nav {
     margin-top: 20px;
     border-radius: 10px;
     color: #FEFFFB;
-    min-height: 25px;
+    min-height: 28px;
+    font-size: 14px;
     flex-wrap: wrap;
 }
 
@@ -97,7 +99,7 @@ nav {
 .material-symbols-outlined  {
     background-color: white;
     border-radius: 50px;
-    margin: 5px;
+    margin: 4px;
     outline: 0;
     box-shadow: 0 0 0 0;
     border: 0;
@@ -142,13 +144,24 @@ nav {
 
 }
 
-.customcheck input{
+.customcheck input {
 display: none;
+height: 18px;
+border-radius: 3px;
+margin-left: 2px;
+vertical-align: middle;
+cursor: pointer;
+color: #484C69;
+background-color:#484C69;
+opacity: 0;
+box-shadow: 0 0 0 0;
+outline: 0;
+border: 0;
 
 }
 
-.customcheck input + label:before{
-   content: '';
+.customcheck input + label::before {
+    content: '';
     width: 30px;
     height: 18px;
     border-radius: 3px;
@@ -156,11 +169,20 @@ display: none;
     border: 2px solid white;
     padding-right: 15px;
     vertical-align: middle;
+    cursor: pointer;
 }
 
-.customcheck input:checked + label:before {
+.customcheck input:checked + label::before{
     content: '';
-    background-color:rgb(27, 180, 103) ;
+    background-color: rgb(27, 180, 103);
+    width: 30px;
+    height: 18px;
+    border-radius: 3px;
+    margin-right:  15px; 
+    vertical-align: center;
+    border: 2px solid white;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 /* #checkbox {

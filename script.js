@@ -26,17 +26,19 @@ let lista = document.querySelector('#lista-container');
             checkinput.type = 'checkbox';
             checkinput.id = 'checkbox';
             let label = document.createElement('label');
-            label.for = 'checkbox'
-
+            label.setAttribute = 'for'
+            label.getAttribute = 'checkbox'
+   
            
-        divlist.appendChild(newH2);
-        divlist.appendChild(btn);
-        newitem.appendChild(divlist);
-        newitem.appendChild(check);
-        check.appendChild(checkinput);
-        check.appendChild(label);
-        newH2.innerHTML = input.value;
-        lista.appendChild(newitem);
+            
+            divlist.appendChild(newH2);
+            divlist.appendChild(btn);
+            newitem.appendChild(divlist);
+            newitem.appendChild(check);
+            check.appendChild(checkinput);
+            check.appendChild(label);
+            newH2.innerHTML = input.value;
+            lista.appendChild(newitem);
  }
 
 
