@@ -16,7 +16,7 @@ h1 {
     text-decoration:underline rgb(27, 180, 103);
     min-width: 20vw;
     border-radius: 5px;
-    padding-bottom: 30px;
+    padding: 40px;
   
 
 }
@@ -25,9 +25,12 @@ h2 {
     display: flex;
     justify-content: start;
     background-color: #484C69;
-    margin-top: 10px;
     margin-left: 13px;
     order: 1;
+}
+
+span{
+    padding: 7px;
 }
 
 nav {
@@ -41,19 +44,16 @@ nav {
 
 .container-add {
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     flex-direction: column;
     background-color: #2B2D42;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 4%;
-    padding: 4px;
-  
-    min-height: 10vw;
+    min-height: 15vw;
     border-radius: 10px;
     color: white;
 }
+
+
 
 #add-text{
     height: 30px;
@@ -72,26 +72,26 @@ nav {
 
 .item-lista{
     display: flex;
-    align-items: center;
+    align-items: center; 
     padding: 7px;
     justify-content: space-between;
-
     flex-direction:row;
     background-color: 	#484C69;
-    margin-left: 30%;
-    margin-right: 30%;
+   order: 1;
     margin-top: 20px;
     border-radius: 10px;
     color: #FEFFFB;
     min-height: 28px;
+    min-width: 37vw;
     font-size: 14px;
     flex-wrap: wrap;
 }
 
-.divlista{
+.divH2{
     background-color: #484C69;
     display: flex;
     justify-content: flex-start;
+
     
 }
 
@@ -138,20 +138,29 @@ nav {
 
 }
 
+
 #lista-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
 }
 
-.customcheck input {
+.divbotoes {
+    display: flex;
+    background-color: #484C69;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.divbotoes input {
 display: none;
 }
 
-.customcheck input + label::before {
+.divbotoes input + label::before {
     content: '';
-    width: 40px;
-    height: 24px;
     border-radius: 3px;
     background-color: #484C69;
     border: 2px solid white;
@@ -160,7 +169,7 @@ display: none;
     cursor: pointer;
 }
 
-.customcheck input:checked + label::before{
+.divbotoes input:checked + label::before {
   
     background-color: rgb(27, 180, 103);
       background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
@@ -168,7 +177,7 @@ display: none;
 }
 
 
-/* #checkbox {
-    /* size: 40px; */
-    /* background-color:#484C69; */
-/* } */ 
+ #checkbox {
+     size: 40px; 
+     background-color:#484C69; 
+ } 

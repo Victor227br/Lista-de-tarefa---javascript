@@ -14,20 +14,18 @@
 
 <div class="container-add">
     <h1 id="titulo">Lista de tarefas</h1>
-    <input id="add-text" type="text" placeholder="Adicione uma tarefa" />
-          <button id="button-criar" onclick="criartarefa()" >Adicionar</button>
-  
-          
-        </div> 
+    
+        <input id="add-text" type="text" placeholder="Adicione uma tarefa" required>
+        <span>
+            <button id="button-criar" onclick="criartarefa()" >Adicionar</button>    
+        </span>
+ </div>
         <ul id="lista-container"></ul>
         
         <nav>
             <button id="button-excluirlista" onclick="apagartudo()" id="limpar-button"> Apagar lista</button>
         </nav>
 
-
-    <script src="script.js"></script>
-        
-
+    <script src="script.js"></script>   
 </body>
 </html>
