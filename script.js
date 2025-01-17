@@ -4,7 +4,7 @@ let lista = document.querySelector('#lista-container');
 
  function criartarefa () {
 
-    // let divlist = document.createElement('div')
+    // let divlist = document.createElement('divEsquerda')
     // divlist.className = 'divlista'
 
         let novoItem = document.createElement('li')
@@ -20,12 +20,12 @@ let lista = document.querySelector('#lista-container');
             excluir(novoItem)
         }
 
-        let divH2 = document.createElement('div')
-        divH2.className = 'divH2'
+        let divEsquerda = document.createElement('div')
+        divEsquerda.className = 'divEsquerda'
         let novoH2 = document.createElement('h2');
         
-        let divBtns = document.createElement ('div');
-        divBtns.className = 'divbotoes'
+        let    divInput = document.createElement ('div');
+        divInput.className = 'divCheck'
         
         let checkInput = document.createElement('input')
         checkInput.type = 'checkbox'
@@ -33,28 +33,30 @@ let lista = document.querySelector('#lista-container');
         let checkLabel = document.createElement('label')
         checkLabel.setAttribute('for','checkbox')
 
-            // let checkdiv = document.createElement('div');
-            // checkdiv.className = 'customcheck';
-            // let checkinput = document.createElement('input');
-            // checkinput.type = 'checkbox';
-            // checkinput.id = 'checkbox';
-            // let label = document.createElement('label');
-            // label.setAttribute('for', 'checkbox')
-                          
-            divH2.appendChild(novoH2);
-            divBtns.appendChild(btnExcluirItem);
-            divBtns.appendChild(checkInput)
-            divBtns.appendChild(checkLabel)
-            novoItem.appendChild(divH2);
-            novoItem.appendChild(divBtns);
+        checkInput.addEventListener('click', function (){
+         novoItem.style.backgroundColor = '#FFFA00'
+         divEsquerda.style.backgroundColor ='#FFFA00'
+        novoH2.style.backgroundColor = '#FFFA00'
+        })
+        //adicionar uma função ao clicar no checkbox
+        // a função tem que mudar o css do checkbox e do item lista de cada item
+        // ao ser clicado de novo voltar a função ao original 
+        function criartarefa (){
 
-            // checkdiv.appendChild(checkinput);
-            // checkdiv.appendChild(label); 
+        }
+                          
+            divEsquerda.appendChild(novoH2);
+            divEsquerda.appendChild(btnExcluirItem);
+
+            divInput.appendChild(checkInput)
+            divInput.appendChild(checkLabel)
+
+            novoItem.appendChild(divEsquerda);
+            novoItem.appendChild(divInput);
 
             novoH2.innerHTML = input.value;
             lista.appendChild(novoItem);
  }
-
 
  function addbutton (e) {
     if (e.key === 'Enter') {
@@ -65,8 +67,6 @@ let lista = document.querySelector('#lista-container');
 
  input.addEventListener('keyup', addbutton);
 
-
-    
 
     function excluir (novoItem) {
             novoItem.remove();
