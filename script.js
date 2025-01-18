@@ -4,9 +4,7 @@ let lista = document.querySelector('#lista-container');
 
  function criartarefa () {
 
-    // let divlist = document.createElement('divEsquerda')
-    // divlist.className = 'divlista'
-
+    
         let novoItem = document.createElement('li')
         novoItem.className = 'item-lista';
 
@@ -24,14 +22,17 @@ let lista = document.querySelector('#lista-container');
         divEsquerda.className = 'divEsquerda'
         let novoH2 = document.createElement('h2');
         
-        let    divInput = document.createElement ('div');
+        let divInput = document.createElement ('div');
         divInput.className = 'divCheck'
-        
+
+        let unicoId = `${Math.random().toString(18).slice(2)}`
+        console.log(unicoId)
+
         let checkInput = document.createElement('input')
         checkInput.type = 'checkbox'
-        checkInput.id = 'checkbox'
+        checkInput.id = unicoId;
         let checkLabel = document.createElement('label')
-        checkLabel.setAttribute('for','checkbox')
+        checkLabel.setAttribute('for', unicoId)
 
         checkInput.addEventListener('click', function (){
          novoItem.style.backgroundColor = '#FFFA00'
@@ -41,10 +42,7 @@ let lista = document.querySelector('#lista-container');
         //adicionar uma função ao clicar no checkbox
         // a função tem que mudar o css do checkbox e do item lista de cada item
         // ao ser clicado de novo voltar a função ao original 
-        function criartarefa (){
-
-        }
-                          
+                       
             divEsquerda.appendChild(novoH2);
             divEsquerda.appendChild(btnExcluirItem);
 
