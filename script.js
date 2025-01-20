@@ -25,7 +25,7 @@ let lista = document.querySelector('#lista-container');
         let divInput = document.createElement ('div');
         divInput.className = 'divCheck'
 
-        let unicoId = `${Math.random().toString(18).slice(2)}`
+        let unicoId = `${Math.random().toString(16).slice(2)}`
         console.log(unicoId)
 
         let checkInput = document.createElement('input')
@@ -34,26 +34,33 @@ let lista = document.querySelector('#lista-container');
         let checkLabel = document.createElement('label')
         checkLabel.setAttribute('for', unicoId)
 
+        
         checkInput.addEventListener('click', function (){
-         novoItem.style.backgroundColor = '#FFFA00'
-         divEsquerda.style.backgroundColor ='#FFFA00'
-        novoH2.style.backgroundColor = '#FFFA00'
+        if (checkInput.checked){ 
+        novoItem.style.backgroundColor = 'rgb(27, 180, 103)';
+        divEsquerda.style.backgroundColor = 'rgb(27, 180, 103)';
+        novoH2.style.backgroundColor = 'rgb(27, 180, 103)';
+        novoItem.style.opacity=0.3;
+        }
+        else{
+        novoItem.style.backgroundColor = '';
+        divEsquerda.style.backgroundColor = '';
+        novoH2.style.backgroundColor = '';
+        novoItem.style.opacity=1;
+        }
         })
-        //adicionar uma função ao clicar no checkbox
-        // a função tem que mudar o css do checkbox e do item lista de cada item
-        // ao ser clicado de novo voltar a função ao original 
-                       
-            divEsquerda.appendChild(novoH2);
-            divEsquerda.appendChild(btnExcluirItem);
 
-            divInput.appendChild(checkInput)
-            divInput.appendChild(checkLabel)
+        divEsquerda.appendChild(novoH2);
+        divEsquerda.appendChild(btnExcluirItem);
 
-            novoItem.appendChild(divEsquerda);
-            novoItem.appendChild(divInput);
+        divInput.appendChild(checkInput)
+        divInput.appendChild(checkLabel)
 
-            novoH2.innerHTML = input.value;
-            lista.appendChild(novoItem);
+        novoItem.appendChild(divEsquerda);
+        novoItem.appendChild(divInput);
+
+        novoH2.innerHTML = input.value;
+        lista.appendChild(novoItem);
  }
 
  function addbutton (e) {
@@ -70,6 +77,6 @@ let lista = document.querySelector('#lista-container');
             novoItem.remove();
     }
 
-    function apagartudo(){
+    function apagarTudo(){
         lista.innerHTML = " ";
     }
