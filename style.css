@@ -70,7 +70,7 @@ nav {
 }
 
 
-.item-lista{
+.item{
     display: flex;
     align-items: center; 
     padding: 7px;
@@ -181,3 +181,7 @@ display: none;
      size: 40px; 
      background-color:#484C69; 
  } 
+
+ #serch {
+
+ }
