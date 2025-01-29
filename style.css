@@ -4,12 +4,6 @@
     background-color: #2B2D42;
 }
     
-/* #titulo{
-    display: flex;
-    padding: 10px;
-    justify-content: center;
-} */
-
 h1 {
     display: flex;
     justify-content: center;
@@ -17,8 +11,6 @@ h1 {
     min-width: 20vw;
     border-radius: 5px;
     padding: 40px;
-  
-
 }
 
 h2 {
@@ -39,7 +31,6 @@ nav {
     align-self: center; 
     margin-top: 5vw;
     margin-bottom: 2vw;
-
 }
 
 .container-add {
@@ -66,7 +57,6 @@ nav {
     background-color: #FFFFFF;
     color: #2B2D42;
     padding-left: 8px;
-    
 }
 
 
@@ -91,10 +81,8 @@ nav {
     background-color: #484C69;
     display: flex;
     align-items: center;
-    flex-direction: row;
-    
+    flex-direction: row;    
 }
-
 
 .material-symbols-outlined  {
     background-color:rgb(255, 0, 0);
@@ -106,7 +94,6 @@ nav {
     outline: 0;
     color: white;
     cursor: pointer;
-    
 }
 
 #button-criar{
@@ -120,8 +107,6 @@ nav {
     min-width: 16vw;
     color: #FFFFFF;
     background-color: rgb(27, 180, 103);
-    
-
 }
 
 #button-excluirlista{
@@ -135,7 +120,6 @@ nav {
     color: #FFFFFF;
     background-color:  rgb(255, 0, 0);
     cursor: pointer;
-
 }
 
 
@@ -144,8 +128,6 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .divCheck {
