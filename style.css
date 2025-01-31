@@ -3,6 +3,8 @@
     padding: 0;
     background-color: #2B2D42;
 }
+
+
     
 h1 {
     display: flex;
@@ -21,7 +23,7 @@ h2 {
     order: 1;
 }
 
-span{
+#style-button{
     padding: 7px;
 }
 
@@ -39,11 +41,9 @@ nav {
     align-items: center;
     flex-direction: column;
     background-color: #2B2D42;
-    min-height: 15vw;
-    border-radius: 10px;
     color: white;
-}
 
+}
 
 
 #add-text{
@@ -72,7 +72,7 @@ nav {
     border-radius: 10px;
     color: #FEFFFB;
     min-height: 28px;
-    min-width: 37vw;
+    min-width: 45vw;
     font-size: 14px;
     flex-wrap: wrap;
 }
@@ -147,8 +147,10 @@ display: none;
     background-color: #484C69;
     border: 2px solid white;
     padding-right: 15px;
-    vertical-align: middle;
+    vertical-align:middle;
     cursor: pointer;
+    overflow-x: auto;
+    size: 20px;
 }
 
 .divCheck input:checked + label::before {
@@ -160,10 +162,53 @@ display: none;
 
 
  #checkbox {
-     size: 40px; 
+     size: 40px;
      background-color:#484C69; 
  } 
 
- #serch {
+ #procurar-item{
+    display:flex;
+    align-self: flex-start;
+    width: 98vw;
+    /* border-radius: 5px; ; */
+    padding: 10px;
+    background-color: #484C69;
+}
 
+ #search {
+    height: 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    min-width: 10vw;
+    box-shadow: 0 0 0 0;
+    border: 0;
+    outline: 0;
+    background-color: #FFFFFF;
+    color: #2B2D42;
+    padding-left: 8px;
+    
  }
+
+ @media (max-width: 440px){
+
+.item{
+        width: 80vw;
+}
+
+#add-text{
+        width: 56vw;
+}
+#button-criar{       
+        width: 28vw;
+}
+#style-button{
+    padding: 14px;
+}
+#button-excluirlista{
+    
+    margin-bottom: 180px;
+    bottom: 0;
+   position: static;
+    width: 28vw;
+ }
+}

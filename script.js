@@ -1,8 +1,10 @@
 let input = document.querySelector("#add-text");
 let lista = document.querySelector("#lista-container");
 
-function criartarefa() {
-  let novoItem = document.createElement("li");
+
+function criarTarefa() {
+ 
+ let novoItem = document.createElement("li");
   novoItem.className = "item";
 
   let btnExcluirItem = document.createElement("button");
@@ -17,6 +19,7 @@ function criartarefa() {
   let divEsquerda = document.createElement("div");
   divEsquerda.className = "divEsquerda";
   let novoH2 = document.createElement("h2");
+  
 
   let divInput = document.createElement("div");
   divInput.className = "divCheck";
@@ -36,7 +39,7 @@ function criartarefa() {
       divEsquerda.style.backgroundColor = "rgb(27, 180, 103)";
       novoH2.style.backgroundColor = "rgb(27, 180, 103)";
       novoItem.style.opacity = 0.3;
-    } else {
+ } else {
       novoItem.style.backgroundColor = "";
       divEsquerda.style.backgroundColor = "";
       novoH2.style.backgroundColor = "";
@@ -57,20 +60,17 @@ function criartarefa() {
   lista.appendChild(novoItem);
 }
 
-function addbutton (e) {
-if (e.key === 'Enter') {
-    let novoItem = document.createElement("li");
-    novoItem.className = "item";
-        // criartarefa()
-        input.value = "";
-      
-if (novoItem) {
-    novoH2.value
-       
-}  
+function adicionarTarefa (e) {
+if (e.key === 'Enter'){
+  if (input.value.trim() === "") {
+    return;
+} 
+    criarTarefa();
+    input.value = ""; 
 }
 }
-  input.addEventListener('keyup', addbutton);
+input.addEventListener('keyup', adicionarTarefa)
+
 
 function excluir(novoItem) {
   novoItem.remove();
@@ -80,6 +80,25 @@ function apagarTudo() {
   lista.innerHTML = " ";
 }
 
-function localizarItem() {
 
-};
+const searchInput = document.getElementById('search')
+
+searchInput.addEventListener('input', (event) =>{
+
+    const value = formateString(event.target.value);
+    const itens = document.querySelectorAll('#lista-container .item')
+    itens.forEach(item=> {
+if(formateString(item.textContent).indexOf(value) !== -1  ){
+
+item.style.display = 'flex';
+
+} else {
+    item.style.display = 'none';
+  }
+}) 
+})
+
+
+function formateString(value){
+return value.toLowerCase().trim()
+}
