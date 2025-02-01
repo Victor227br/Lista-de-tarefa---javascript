@@ -21,8 +21,11 @@ function criarTarefa() {
   let novoH2 = document.createElement("h2");
   
 
-  let divInput = document.createElement("div");
-  divInput.className = "divCheck";
+  let divBotoes = document.createElement("div");
+  divBotoes.className = "divBtns";
+  
+  let divCheck = document.createElement("div")
+  divCheck.className = "divCheckBox"
 
   let unicoId = `${Math.random().toString(16).slice(2)}`;
   console.log(unicoId);
@@ -38,23 +41,29 @@ function criarTarefa() {
       novoItem.style.backgroundColor = "rgb(27, 180, 103)";
       divEsquerda.style.backgroundColor = "rgb(27, 180, 103)";
       novoH2.style.backgroundColor = "rgb(27, 180, 103)";
+      divBotoes.style.backgroundColor = "rgb(27, 180, 103)"
+      divCheck.style.background = "rgb(27, 180, 103)"
       novoItem.style.opacity = 0.3;
  } else {
       novoItem.style.backgroundColor = "";
       divEsquerda.style.backgroundColor = "";
       novoH2.style.backgroundColor = "";
+     divBotoes.style.backgroundColor = ""
+      divCheck.style.background = ""
       novoItem.style.opacity = 1;
     }
   });
 
   divEsquerda.appendChild(novoH2);
-  divEsquerda.appendChild(btnExcluirItem);
 
-  divInput.appendChild(checkInput);
-  divInput.appendChild(checkLabel);
+ 
+  divCheck.appendChild(checkInput);
+  divCheck.appendChild(checkLabel);
+  divBotoes.appendChild(btnExcluirItem);
+  divBotoes.appendChild(divCheck)
 
   novoItem.appendChild(divEsquerda);
-  novoItem.appendChild(divInput);
+  novoItem.appendChild(divBotoes);
 
   novoH2.innerHTML = input.value;
   lista.appendChild(novoItem);
@@ -69,6 +78,7 @@ if (e.key === 'Enter'){
     input.value = ""; 
 }
 }
+
 input.addEventListener('keyup', adicionarTarefa)
 
 
@@ -91,6 +101,7 @@ searchInput.addEventListener('input', (event) =>{
 if(formateString(item.textContent).indexOf(value) !== -1  ){
 
 item.style.display = 'flex';
+item.style.display =' ';
 
 } else {
     item.style.display = 'none';

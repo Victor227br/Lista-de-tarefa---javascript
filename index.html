@@ -12,14 +12,15 @@
 </head>
 <body>
 
+    <span id="estiloBarra"><div class="barraCentralizar"><input id="search" type="text" placeholder="Busque uma tarefa"></div></span>
     <div class="container-add">
-    <span id="procurar-item"><input id="search" type="text" placeholder="Busque uma tarefa"></span>
     <h1 id="titulo">Lista de tarefas</h1>
 
+    <div id="estilizarAdicionarTarefa">
         <input id="add-text" type="text" placeholder="Adicione uma tarefa" required >
-        <span id="style-button">
-            <button id="button-criar" onclick="criarTarefa()" >Adicionar</button>    
-        </span>
+        <button id="button-criar" onclick="criarTarefa()" >Add</button>    
+    </div>
+        
  </div>
         <ul id="lista-container"></ul>
         
