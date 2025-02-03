@@ -101,8 +101,6 @@ searchInput.addEventListener('input', (event) =>{
 if(formateString(item.textContent).indexOf(value) !== -1  ){
 
 item.style.display = 'flex';
-item.style.display =' ';
-
 } else {
     item.style.display = 'none';
   }

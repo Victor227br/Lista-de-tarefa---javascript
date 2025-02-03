@@ -12,21 +12,28 @@
 </head>
 <body>
 
-    <span id="estiloBarra"><div class="barraCentralizar"><input id="search" type="text" placeholder="Busque uma tarefa"></div></span>
+    <!-- <span id="estiloBarra"><div class="barradePesquisaCentralizar"><input id="search" type="text" placeholder="Busque uma tarefa"></div></span> -->
     <div class="container-add">
     <h1 id="titulo">Lista de tarefas</h1>
 
     <div id="estilizarAdicionarTarefa">
         <input id="add-text" type="text" placeholder="Adicione uma tarefa" required >
-        <button id="button-criar" onclick="criarTarefa()" >Add</button>    
+        <span class="estilobutton">
+            <button id="button-criar" onclick="criarTarefa()" >+</button>    
+        </span>
     </div>
         
  </div>
         <ul id="lista-container"></ul>
         
-        <nav>
-            <button id="button-excluirlista" onclick="apagarTudo()" id="limpar-button">Apagar lista</button>
-        </nav>
+        
+            <span id="centralizarFinal">
+                <div id="estilizarBusca">
+                    <input id="search" type="text" placeholder="Busque uma tarefa">
+                </div>
+                <button id="button-excluirlista" onclick="apagarTudo()" id="limpar-button">Apagar Lista</button>
+            </span>
+        
 
     <script src="script.js"></script>   
 </body>

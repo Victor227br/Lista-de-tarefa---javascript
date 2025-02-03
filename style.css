@@ -38,11 +38,12 @@ nav {
 
 .container-add {
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     flex-direction: column;
     /* background-color: #2B2D42; */
     color: white;
+   padding: 20px;
 
 }
 
@@ -50,8 +51,8 @@ nav {
 #add-text{
     height: 30px;
     border-radius: 5px;
-    font-size: 16px;
-    min-width: 16vw;
+    font-size: 14px;
+    width: 12vw;
     box-shadow: 0 0 0 0;
     border: 0;
     outline: 0;
@@ -63,8 +64,13 @@ nav {
 #estilizarAdicionarTarefa{
     display: flex;
     flex-direction: row;
+    margin-left:3vw;
+
 }
 
+.estilobutton{
+    padding-left: 10px;
+}
 
 .item{
     display: flex;
@@ -106,7 +112,7 @@ nav {
 #button-criar{
     height: 30px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 28px;
     box-shadow: 0 0 0 0;
     border: 0;
     outline: 0;
@@ -116,10 +122,10 @@ nav {
 }
 
 #button-excluirlista{
-    min-height: 30px;
+    height: 30px;
     border-radius: 5px;
     font-size: 16px;
-    min-width: 8vw;
+    width: 12vw;
     box-shadow: 0 0 0 0;
     border: 0;
     outline: 0;
@@ -179,26 +185,24 @@ display: none;
      background-color:#484C69; 
  } 
 
- #estiloBarra{
-    display:flex;
-  
-    width: 100%;
-    padding-bottom: 15px;
-    background-color: #484C69;
+
+#centralizarFinal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 60px;
 }
 
-.barraCentralizar{
-    display: flex;
-    align-self: center;
-    margin-top: 20px;
-    margin-left: 20px; ;
+#estilizarBusca{
+    padding: 20px;
 }
 
  #search {
-    height: 20px;
+    height: 30px;
     border-radius: 5px;
-    font-size: 13px;
-    min-width: 10vw;
+    font-size: 14px;
+    width: 12vw;
     box-shadow: 0 0 0 0;
     border: 0;
     outline: 0;
@@ -215,15 +219,20 @@ display: none;
 }
 
 #add-text{
-        width: 56vw;
+        width: 42vw;
 }
 #button-criar{       
-        width: 28vw;
+        width: 10vw;
 }
 #style-button{
     padding: 14px;
 }
 #button-excluirlista{
-   
+   width: 32vw;
  }
+
+ #search {
+
+    width: 42vw;
+}
 }
