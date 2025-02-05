@@ -20,8 +20,7 @@ h2 {
     display: flex;
     justify-content: start;
     background-color: #484C69;
-    margin-left: 13px;
-    order: 1;
+    padding-left: 13px;
 }
 
 #style-button{
@@ -89,11 +88,11 @@ nav {
     flex-wrap: wrap;
 }
 
-.divEsquerda{
-    background-color: #484C69;
+.diVH2{
+    /* background-color: #484C69; */
     display: flex;
     align-items: center;
-    flex-direction: row;    
+    /* flex-direction: row;     */
 }
 
 .material-symbols-outlined  {
@@ -169,7 +168,6 @@ display: none;
     vertical-align:middle;
     cursor: pointer;
     size: 20px;
-
 }
 
 .divBtns input:checked + label::before {
@@ -179,12 +177,10 @@ display: none;
     position: center;
 }
 
-
  #checkbox {
      size: 50px;
      background-color:#484C69; 
  } 
-
 
 #centralizarFinal{
     display: flex;
@@ -196,6 +192,7 @@ display: none;
 
 #estilizarBusca{
     padding: 20px;
+    
 }
 
  #search {

@@ -4,20 +4,24 @@ let lista = document.querySelector("#lista-container");
 
 function criarTarefa() {
  
- let novoItem = document.createElement("li");
-  novoItem.className = "item";
+    if (input.value.trim() === "") {
+        return;
+    } 
+
+ let itemLista = document.createElement("li");
+  itemLista.className = "item";
 
   let btnExcluirItem = document.createElement("button");
   btnExcluirItem.className = "material-symbols-outlined";
   btnExcluirItem.innerHTML = "close";
-  console.log(btnExcluirItem);
+  
 
   btnExcluirItem.onclick = function () {
-    excluir(novoItem);
+    excluir(itemLista);
   };
 
-  let divEsquerda = document.createElement("div");
-  divEsquerda.className = "divEsquerda";
+  let divH2 = document.createElement("div");
+  divH2.className = "divH2";
   let novoH2 = document.createElement("h2");
   
 
@@ -38,35 +42,31 @@ function criarTarefa() {
 
   checkInput.addEventListener("click", function () {
     if (checkInput.checked) {
-      novoItem.style.backgroundColor = "rgb(27, 180, 103)";
-      divEsquerda.style.backgroundColor = "rgb(27, 180, 103)";
+      itemLista.style.backgroundColor = "rgb(27, 180, 103)";
+      divH2.style.backgroundColor = "rgb(27, 180, 103)";
       novoH2.style.backgroundColor = "rgb(27, 180, 103)";
       divBotoes.style.backgroundColor = "rgb(27, 180, 103)"
       divCheck.style.background = "rgb(27, 180, 103)"
-      novoItem.style.opacity = 0.3;
+      itemLista.style.opacity = 0.3;
  } else {
-      novoItem.style.backgroundColor = "";
-      divEsquerda.style.backgroundColor = "";
+      itemLista.style.backgroundColor = "";
+      divH2.style.backgroundColor = "";
       novoH2.style.backgroundColor = "";
      divBotoes.style.backgroundColor = ""
       divCheck.style.background = ""
-      novoItem.style.opacity = 1;
+      itemLista.style.opacity = 1;
     }
   });
 
-  divEsquerda.appendChild(novoH2);
-
- 
+  divH2.appendChild(novoH2);
   divCheck.appendChild(checkInput);
   divCheck.appendChild(checkLabel);
   divBotoes.appendChild(btnExcluirItem);
   divBotoes.appendChild(divCheck)
-
-  novoItem.appendChild(divEsquerda);
-  novoItem.appendChild(divBotoes);
-
+  itemLista.appendChild(divH2);
+  itemLista.appendChild(divBotoes);
   novoH2.innerHTML = input.value;
-  lista.appendChild(novoItem);
+  lista.appendChild(itemLista);
 }
 
 function adicionarTarefa (e) {
@@ -78,9 +78,7 @@ if (e.key === 'Enter'){
     input.value = ""; 
 }
 }
-
 input.addEventListener('keyup', adicionarTarefa)
-
 
 function excluir(novoItem) {
   novoItem.remove();
@@ -89,7 +87,6 @@ function excluir(novoItem) {
 function apagarTudo() {
   lista.innerHTML = " ";
 }
-
 
 const searchInput = document.getElementById('search')
 
@@ -106,7 +103,6 @@ item.style.display = 'flex';
   }
 }) 
 })
-
 
 function formateString(value){
 return value.toLowerCase().trim()
